@@ -60,7 +60,7 @@ The frontend uses these deployed addresses by default. Explorer links open the c
 | [FundoraEvents](https://explorer.arc.io/address/0xa8353b078a258cd9caacc618b1fe1404666b9525) | `0xa8353b078a258cd9caacc618b1fe1404666b9525` |
 | [AdminRegistry](https://explorer.arc.io/address/0xc57dbdb09123a6b648dc6d4bdf0e5ebf510b0ee1) | `0xc57dbdb09123a6b648dc6d4bdf0e5ebf510b0ee1` |
 | [Fundora grants](https://explorer.arc.io/address/0x371b4b6894882082e706cd84b781bf749472a602) | `0x371b4b6894882082e706cd84b781bf749472a602` |
-| [USDC](https://explorer.arc.io/address/0x3600000000000000000000000000000000000000) | `0x3600000000000000000000000000000000000000` |
+
 
 ## Requirements
 
