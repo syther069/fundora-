@@ -95,7 +95,7 @@ function BrandLogo({ className = 'h-8 w-auto' }: { className?: string }) {
   )
 }
 
-function BrandWordmark({ className = 'h-5 sm:h-5.5 w-auto' }: { className?: string }) {
+function BrandWordmark({ className = 'h-5 sm:h-6 w-auto' }: { className?: string }) {
   return (
     <img
       src="/brand/fundora-logo-text.png"
@@ -2106,10 +2106,10 @@ export function LandingPage({
             style={{ borderColor: 'var(--border)' }}
           >
             {/* Column 1-2: Brand & Mission */}
-            <div className="lg:col-span-2 space-y-3">
+            <div className="lg:col-span-2 min-w-0 space-y-3">
               <div className="flex items-center gap-2.5">
                 <BrandLogo className="h-7 w-auto" />
-                <BrandWordmark className="h-4.5 w-auto" />
+                <BrandWordmark className="h-5 w-auto max-w-[180px]" />
                 <span
                   className="text-[11px] font-medium px-2 py-0.5 rounded-full border"
                   style={{
