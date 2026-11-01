@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://raw.githubusercontent.com/syther069/fundora-/main/public/brand/fundora-logo-mark.png" alt="Fundora logo" width="80" height="80" />
+  <img src="https://raw.githubusercontent.com/syther069/fundora-/main/public/favicon.png" alt="Fundora logo" width="80" height="80" />
   <h1>Fundora</h1>
   <p><strong>Open-source grants, hackathons, and bounties on the Arc Network</strong></p>
 
