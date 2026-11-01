@@ -3,10 +3,7 @@
   <h1>Fundora</h1>
   <p><strong>Open-source grants, hackathons, and bounties on the Arc Network</strong></p>
 
-  <p>
-    <a href="https://explorer.mainnet.arc.io/address/0xa8353b078a258cd9caacc618b1fe1404666b9525"><img src="https://img.shields.io/badge/Arc_Mainnet-Active-0F766E?style=flat-square&logo=ethereum" alt="Arc Mainnet" /></a>
-    <a href="https://explorer.testnet.arc.io/address/0xc9c7033f4736f8b6e213ea7617596c3fd7bb154a"><img src="https://img.shields.io/badge/Arc_Testnet-Active-1A3F75?style=flat-square" alt="Arc Testnet" /></a>
-    <a href="https://arc.io"><img src="https://img.shields.io/badge/USDC-Native_Gas_%26_Escrow-2775CA?style=flat-square&logo=circle" alt="Native USDC" /></a>
+  <p>    <a href="https://explorer.arc.io/address/0xa8353b078a258cd9caacc618b1fe1404666b9525"><img src="https://img.shields.io/badge/Arc_Mainnet-Active-0F766E?style=flat-square&logo=ethereum" alt="Arc Mainnet" /></a><a href="https://arc.io"><img src="https://img.shields.io/badge/USDC-Native_Gas_%26_Escrow-2775CA?style=flat-square&logo=circle" alt="Native USDC" /></a>
     <img src="https://img.shields.io/badge/Solidity-0.8.28-363636?style=flat-square&logo=solidity" alt="Solidity 0.8.28" />
     <img src="https://img.shields.io/badge/TypeScript-Strict-3178C6?style=flat-square&logo=typescript" alt="TypeScript Strict" />
   </p>
@@ -18,7 +15,7 @@ Fundora is an open-source application for discovering and running USDC-funded gr
 
 Built with [Arc Studio](https://studio.arc.io).
 
-The app supports Arc Testnet for testing and Arc Mainnet for live activity. Wallet transactions are signed by the connected wallet. Fundora's contracts use pull payments: approved recipients claim their own available funds instead of relying on a batch of outbound transfers.
+The app runs on Arc Mainnet. Wallet transactions are signed by the connected wallet. Fundora's contracts use pull payments: approved recipients claim their own available funds instead of relying on a batch of outbound transfers.
 
 ## What it does
 
@@ -60,19 +57,10 @@ The frontend uses these deployed addresses by default. Explorer links open the c
 
 | Contract | Address |
 | --- | --- |
-| [FundoraEvents](https://explorer.mainnet.arc.io/address/0xa8353b078a258cd9caacc618b1fe1404666b9525) | `0xa8353b078a258cd9caacc618b1fe1404666b9525` |
-| [AdminRegistry](https://explorer.mainnet.arc.io/address/0xc57dbdb09123a6b648dc6d4bdf0e5ebf510b0ee1) | `0xc57dbdb09123a6b648dc6d4bdf0e5ebf510b0ee1` |
-| [Fundora grants](https://explorer.mainnet.arc.io/address/0x371b4b6894882082e706cd84b781bf749472a602) | `0x371b4b6894882082e706cd84b781bf749472a602` |
-| [USDC](https://explorer.mainnet.arc.io/address/0x3600000000000000000000000000000000000000) | `0x3600000000000000000000000000000000000000` |
-
-### Arc Testnet (chain ID `5042002`)
-
-| Contract | Address |
-| --- | --- |
-| [FundoraEvents](https://explorer.testnet.arc.io/address/0xc9c7033f4736f8b6e213ea7617596c3fd7bb154a) | `0xc9c7033f4736f8b6e213ea7617596c3fd7bb154a` |
-| [AdminRegistry](https://explorer.testnet.arc.io/address/0x9bf7d4681410f7db14490cc67d517e3621d73fe6) | `0x9bf7d4681410f7db14490cc67d517e3621d73fe6` |
-| [Fundora grants](https://explorer.testnet.arc.io/address/0xef34036dda3960a1cd57b1368329bfcf29700259) | `0xef34036dda3960a1cd57b1368329bfcf29700259` |
-| [USDC](https://explorer.testnet.arc.io/address/0x3600000000000000000000000000000000000000) | `0x3600000000000000000000000000000000000000` |
+| [FundoraEvents](https://explorer.arc.io/address/0xa8353b078a258cd9caacc618b1fe1404666b9525) | `0xa8353b078a258cd9caacc618b1fe1404666b9525` |
+| [AdminRegistry](https://explorer.arc.io/address/0xc57dbdb09123a6b648dc6d4bdf0e5ebf510b0ee1) | `0xc57dbdb09123a6b648dc6d4bdf0e5ebf510b0ee1` |
+| [Fundora grants](https://explorer.arc.io/address/0x371b4b6894882082e706cd84b781bf749472a602) | `0x371b4b6894882082e706cd84b781bf749472a602` |
+| [USDC](https://explorer.arc.io/address/0x3600000000000000000000000000000000000000) | `0x3600000000000000000000000000000000000000` |
 
 ## Requirements
 
@@ -83,14 +71,14 @@ The frontend uses these deployed addresses by default. Explorer links open the c
 ## Quickstart
 
 ```bash
-git clone https://github.com/syther069/Fundora.git
-cd Fundora
+git clone https://github.com/syther069/fundora-.git
+cd fundora-
 npm ci
 cp .env.example .env
 npm run dev
 ```
 
-Vite prints the local URL after starting, usually `http://localhost:5173`. Contract addresses have built-in defaults, so the frontend can run without filling in deployment secrets. For local development, use Arc Testnet and a test wallet.
+Vite prints the local URL after starting, usually `http://localhost:5173`. Contract addresses have built-in defaults, so the frontend can run without filling in deployment secrets.
 
 ## Environment configuration
 
@@ -98,11 +86,8 @@ The frontend reads optional contract address overrides from `.env`. Leave them u
 
 | Variable | Purpose |
 | --- | --- |
-| `VITE_FUNDORA_ADDRESS` | Arc Testnet grant contract override |
 | `VITE_FUNDORA_ADDRESS_MAINNET` | Arc Mainnet grant contract override |
-| `VITE_ADMIN_REGISTRY_ADDRESS` | Arc Testnet organizer registry override |
 | `VITE_ADMIN_REGISTRY_ADDRESS_MAINNET` | Arc Mainnet organizer registry override |
-| `VITE_FUNDORA_EVENTS_ADDRESS` | Arc Testnet events contract override |
 | `VITE_FUNDORA_EVENTS_ADDRESS_MAINNET` | Arc Mainnet events contract override |
 
 `.env.example` also contains Circle client configuration and deployment settings. `VITE_CLIENT_KEY` and `VITE_CLIENT_URL` are used by Circle wallet flows. Deployment scripts read `PRIVATE_KEY` or `DEPLOYER_PRIVATE_KEY`, `ARC_MAINNET_RPC_URL`, and optionally `TREASURY_ADDRESS`; `scripts/add-mainnet-reviewer.ts` reads `PRIVATE_KEY` and optionally `ARC_MAINNET_RPC_URL`.
@@ -141,8 +126,7 @@ The deployment script accepts `PRIVATE_KEY` or `DEPLOYER_PRIVATE_KEY`, defaults 
 
 - [Smart contract reference and deployed addresses](docs/contracts.md)
 - [Arc Network](https://arc.io/)
-- [Arc Mainnet explorer](https://explorer.mainnet.arc.io/)
-- [Arc Testnet explorer](https://explorer.testnet.arc.io/)
+- [Arc Mainnet explorer](https://explorer.arc.io/)
 - [Foundry documentation](https://book.getfoundry.sh/)
 - [Vite documentation](https://vite.dev/guide/)
 
